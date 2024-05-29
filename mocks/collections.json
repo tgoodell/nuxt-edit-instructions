@@ -1,0 +1,8 @@
+[
+  {
+    "id": "base",
+    "routes": [
+      "get-articles:success"
+    ]
+  }
+]
