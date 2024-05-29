@@ -4,7 +4,7 @@ export const useHelpArticleApi = () => {
         baseURL: config.public.apiBase,
         ...useRequestHeaders(['authorization'])
     }
-    const url = defaultOptions.baseURL + 'api/articles'
+    const url = defaultOptions.baseURL + '/api/articles'
     return {
         async list() {
             return useFetch(url, {

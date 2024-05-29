@@ -41,4 +41,6 @@ function truncateHtml(html, maxLength) {
       <PColumn field="updated_at" header="Updated at" />
     </PDataTable>
   </PageWrapper>
+
+  Data: {{ data }}
 </template>
