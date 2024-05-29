@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       apiBase: 'http://localhost:3100',
     },
   },
-  modules: [
-    'nuxt-primevue'
-  ],
+  build: {
+    transpile: ['primevue'],
+  },
 })

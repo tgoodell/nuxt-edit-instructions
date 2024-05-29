@@ -42,5 +42,5 @@ function truncateHtml(html, maxLength) {
     </PDataTable>
   </PageWrapper>
 
-  Data: {{ data }}
+  <!-- Data: {{ data }} -->
 </template>
