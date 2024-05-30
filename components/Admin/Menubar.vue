@@ -1,7 +1,14 @@
 <script setup lang="ts">
-
+const props = defineProps({
+    class: {
+        type: String,
+        default: ''
+    }
+})
 </script>
 
 <template>
-    Menubar!
+    <div :class="class">
+        Admin Menubar!
+    </div>
 </template>
