@@ -21,10 +21,16 @@ export const useHelpArticleApi = () => {
             })
         },
         async find(slug: string) {
-            const data = await $fetch(url, {
-                ...defaultOptions
-            })
-            return await data.find(art => art['slug'] === slug)
+            try {
+                const data = await $fetch(url, {
+                    ...defaultOptions
+                })
+                return await data.find(art => art['slug'] === slug)
+            }
+            catch (e) {
+                console.log(e)
+                return { error: 'Network Error' }
+            }
         }
     }
 }

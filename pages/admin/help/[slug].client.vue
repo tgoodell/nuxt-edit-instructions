@@ -4,13 +4,28 @@ const slug = route.params.slug
 
 const helpArticleApi = useHelpArticleApi()
 const article = ref([])
+const hasError = ref(false)
 
 /**
  * Fetch the relevant article based on the slug from the route
- * TODO: Use the store instead of the API
  */
 async function fetchArticle() {
-  article.value = await helpArticleApi.find(slug)
+  const attempt = await helpArticleApi.find(slug)
+
+  // If the error field exists in the attempt we got
+  if (attempt.error) {
+    hasError.value = true
+    // Replace the article with Network Error information
+    article.value = {
+      'title': "Network Error",
+      'content': `Unable to fetch instructions about ${slug}. Please return home or contact an administrator.`
+    }
+  }
+  else {
+    hasError.value = false
+    // Otherwise, just set the article to the attempt
+    article.value = attempt
+  }
 }
 
 fetchArticle()
@@ -60,7 +75,7 @@ function saveEdits() {
           <div>
             <span v-html="article.content"></span>
           </div>
-          <PButton class="bg-cyan-200 px-3 py-2 hover:bg-cyan-400" @click="enableEditMode">Edit</PButton>
+          <PButton class="bg-cyan-200 px-3 py-2 hover:bg-cyan-400" @click="enableEditMode" v-if="!hasError">Edit</PButton>
         </div>
         <!-- Switch into edit mode with a preview -->
         <div v-else>
@@ -78,7 +93,6 @@ function saveEdits() {
           </div>
         </div>
       </div>
-      
       <!-- Placeholder to give an idea of what the form looks like below -->
       <div id="form" class="p-2">
         <div v-for="n in 10">
@@ -86,6 +100,5 @@ function saveEdits() {
         </div>
       </div>
     </div>
-
   </PageWrapper>
 </template>
