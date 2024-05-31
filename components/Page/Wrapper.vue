@@ -9,7 +9,6 @@ const props = defineProps({
 
 <template>
     <div :class="class">
-        Wrapper!
         <slot></slot>
     </div>
 </template>

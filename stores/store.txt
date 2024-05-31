@@ -1,0 +1,22 @@
+import { defineStore } from 'pinia'
+
+export const useHelpStore = defineStore('store', () => {
+    const articlesList = ref([])
+    
+    /**
+     * Fetch the articles and store them in the store
+     */
+    async function fetchArticles() {
+        const helpArticleApi = useHelpArticleApi()
+        const { data, error } = await helpArticleApi.list()
+        articlesList.value = data
+    }
+
+    async function getArticleBySlug(slug: String) {
+
+    }
+
+    return {
+        getArticleBySlug,
+    }
+})

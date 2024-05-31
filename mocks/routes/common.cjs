@@ -29,4 +29,29 @@ module.exports = [
         },
       ],
     },
+    {
+      id: 'edit-articles', // route id
+      url: '/api/articles', // url in express format
+      method: 'POST', // HTTP method
+      variants: [
+        {
+          id: 'success', // variant id
+          type: 'middleware', // variant handler id
+          options: {
+            middleware: (req, res, next, core) => { // Search for the user and remove it
+              const termIndex = articles.findIndex(termDef => termDef.id == req.body.id)
+              if (termIndex >= 0) {
+                articles[termIndex].content = req.body.content
+                res.status(200) // Okay
+                res.send()
+              }
+              else {
+                res.status(404)
+                res.send()
+              }
+            },
+          },
+        },
+      ],
+    },
   ]

@@ -10,6 +10,15 @@ export const useHelpArticleApi = () => {
             return useFetch(url, {
                 ...defaultOptions
             })
+        },
+        async edit(id: number, content: string) {
+            await $fetch(url, {
+                method: 'POST',
+                body: {
+                    id: id,
+                    content: content
+                }
+            })
         }
     }
 }

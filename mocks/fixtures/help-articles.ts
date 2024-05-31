@@ -5,7 +5,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Award Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -14,7 +14,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Change in Work Schedule Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -23,7 +23,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Detail Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -32,7 +32,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "LWOP Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -41,7 +41,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "LWOP Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -50,7 +50,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Position Review Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -59,7 +59,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Promotion Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -68,7 +68,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Realignment Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -77,7 +77,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Reassignment Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -86,7 +86,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Return to Duty Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -95,7 +95,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Separation Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -104,7 +104,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "AEFI Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -113,7 +113,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "AFSC Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -122,7 +122,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "CRO Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -131,7 +131,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Decoration Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -140,7 +140,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Duty Title Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -149,7 +149,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Inbound Member Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -158,7 +158,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Internal PCA Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -167,7 +167,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "Reassign Billet Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     },
     {
@@ -176,7 +176,7 @@ module.exports = [
         "updated_at": "09/07/2023 15:23",
         "deleted_at": null,
         "title": "SEI Instructions",
-        "content": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nulla vel nisi malesuada, ut fringilla leo ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec convallis ligula sit amet nibh viverra, sed molestie arcu fermentum.",
         "category": "HELP_INFO"
     }
 ]

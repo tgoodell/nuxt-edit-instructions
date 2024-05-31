@@ -8,5 +8,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <h1>{{ pageTitle }}</h1>
+    <h1 class="text-5xl">
+        <RouterLink to="/admin/help">
+            {{ pageTitle }}
+        </RouterLink>
+    </h1>
 </template>

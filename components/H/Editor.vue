@@ -1,4 +1,7 @@
 <script setup>
+import ckeditor from '@ckeditor/ckeditor5-vue';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+
 const data = defineModel()
 
 const editor = ref(null)
@@ -6,22 +9,21 @@ const editorConfig = {
   toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'],
 }
 
-onMounted(async () => {
-  if (process.client) {
-    const { default: ClassicEditor } = await import('@ckeditor/ckeditor5-build-classic')
-    editor.value = ClassicEditor
-  }
-})
+console.log(data)
+
+// onMounted(async () => {
+//   if (process.client) {
+//     const { default: ClassicEditor } = await import('@ckeditor/ckeditor5-build-classic')
+//     editor.value = ClassicEditor
+//     console.log(editor.value)
+//   }
+// })
 </script>
 
 <template>
-  <ckeditor
-    v-if="editor"
-    v-model="data"
-    :editor="editor"
-    :config="editorConfig"
-  />
-  <div v-else>
-    Loading editor...
-  </div>
+  <ckeditor.component 
+			:editor="ClassicEditor" 
+			:config="editorConfig" 
+			v-model="data"
+		/>
 </template>

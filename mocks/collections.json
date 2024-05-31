@@ -2,7 +2,8 @@
   {
     "id": "base",
     "routes": [
-      "get-articles:success"
+      "get-articles:success",
+      "edit-articles:success"
     ]
   }
 ]

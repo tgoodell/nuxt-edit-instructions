@@ -15,30 +15,14 @@ function truncateHtml(html, maxLength) {
 </script>
 
 <template>
-  <PageWrapper class="max-w-screen-2xl">
+  <PageWrapper class="max-w-screen-lg m-auto">
     <PageHeader page-title="Help Articles" />
-    <AdminMenubar class="mb-3" />
+    <AdminMenubar class="mb-3 mt-1" />
 
-    <PDataTable :value="data">
-      <PColumn field="category" header="Category" />
-      <PColumn field="slug" header="Unique ID" />
-      <PColumn field="title" header="Title" />
-      <PColumn field="content" header="Content">
-        <template #body="slotProps">
-          <div class="flex items-center">
-            <HLink :to="`/admin/help/${slotProps.data.slug}`">
-              <PButton
-                severity="info"
-                icon="pi pi-pencil"
-                size="small"
-              />
-            </HLink>
-            <div v-html="truncateHtml(slotProps.data.content, 56)" />
-          </div>
-        </template>
-      </PColumn>
-      <PColumn field="created_at" header="Created at" />
-      <PColumn field="updated_at" header="Updated at" />
-    </PDataTable>
+    <div class="border-2 p-2">
+      <ul>
+        <li v-for="article in data"><HLink :to="`/admin/help/${article.slug}`">{{ article.title }}</HLink></li>
+      </ul>
+    </div>
   </PageWrapper>
 </template>

@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div :class="class">
+    <div :class="class" class="bg-slate-100 p-2">
         Admin Menubar!
     </div>
 </template>
