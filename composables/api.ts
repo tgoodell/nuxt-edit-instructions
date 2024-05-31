@@ -11,14 +11,20 @@ export const useHelpArticleApi = () => {
                 ...defaultOptions
             })
         },
-        async edit(id: number, content: string) {
+        async edit(slug: string, content: string) {
             await $fetch(url, {
                 method: 'POST',
                 body: {
-                    id: id,
+                    slug: slug,
                     content: content
                 }
             })
+        },
+        async find(slug: string) {
+            const data = await $fetch(url, {
+                ...defaultOptions
+            })
+            return await data.find(art => art['slug'] === slug)
         }
     }
 }

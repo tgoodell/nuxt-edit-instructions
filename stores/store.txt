@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 export const useHelpStore = defineStore('store', () => {
     const articlesList = ref([])
     
+    
     /**
      * Fetch the articles and store them in the store
      */
@@ -10,13 +11,24 @@ export const useHelpStore = defineStore('store', () => {
         const helpArticleApi = useHelpArticleApi()
         const { data, error } = await helpArticleApi.list()
         articlesList.value = data
+        console.log(articlesList.value)
     }
 
     async function getArticleBySlug(slug: String) {
-
+        for (const article in articlesList.value) {
+            // console.log(article)
+            // if (article.slug == slug) {
+                
+            //     return article
+            // }
+            return article
+        }
+        return null
     }
 
     return {
+        articlesList,
+        fetchArticles,
         getArticleBySlug,
     }
 })

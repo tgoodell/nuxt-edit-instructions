@@ -11,11 +11,15 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
   ],
   css: [
     'primevue/resources/themes/aura-light-green/theme.css',
     'assets/css/base.css'
   ],
+  imports: {
+    dirs: ['stores'],
+  },
   tailwindcss: {
     config: {
         content: [
