@@ -40,7 +40,6 @@ module.exports = [
           options: {
             middleware: (req, res, next, core) => { // Search for the user and remove it
               const termIndex = articles.findIndex(termDef => termDef.slug == req.body.slug)
-              console.log(req.body.slug)
               if (termIndex >= 0) {
                 articles[termIndex].content = req.body.content
                 res.status(200) // Okay
