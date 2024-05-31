@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const route = useRoute()
 const slug = route.params.slug
 
@@ -36,8 +36,11 @@ function exitEditMode() {
 
 /**
  * Save the edits by exiting edit mode, submitting edits to the backend, and refreshing
+ * This currently saves html tags to the database, but this is required if we want users to bold text, add links, etc.
+ * Ck5Editor automatically escapes any HTML that is typed, so no extra work is needed on our parts
  */
 function saveEdits() {
+  console.log(editingCopy.value)
   helpArticleApi.edit(editingCopy.value.slug, editingCopy.value.content)
   exitEditMode()
   fetchArticle()

@@ -1,17 +1,6 @@
 <script setup>
 const helpArticleApi = useHelpArticleApi()
 const { data, error } = await helpArticleApi.list()
-
-function truncateHtml(html, maxLength) {
-  // Remove HTML tags using a regular expression
-  const plainText = html.replace(/<[^>]+>/g, '')
-
-  // Truncate the plain text
-  if (plainText.length > maxLength)
-    return `${plainText.slice(0, maxLength)}...`
-  else
-    return plainText
-}
 </script>
 
 <template>
