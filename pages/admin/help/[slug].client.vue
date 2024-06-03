@@ -3,7 +3,7 @@ const route = useRoute()
 const slug = route.params.slug
 
 const helpArticleApi = useHelpArticleApi()
-const article = ref([])
+const article = ref<ArticleEntry>
 const hasError = ref(false)
 
 /**
