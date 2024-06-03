@@ -8,7 +8,7 @@ const { data, error } = await helpArticleApi.list()
     <PageHeader page-title="Help Articles" />
     <AdminMenubar class="mb-3 mt-1" />
     <div class="border-2 p-2">
-      <ul>
+      <ul v-if="!error">
         <li v-for="article in data"><HLink :to="`/admin/help/${article.slug}`">{{ article.title }}</HLink></li>
       </ul>
       <NuxtErrorBoundary @error="error">

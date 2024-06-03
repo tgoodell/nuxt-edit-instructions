@@ -77,6 +77,10 @@ function saveEdits() {
             <span v-html="article.content"></span>
           </div>
           <PButton class="bg-cyan-200 px-3 py-2 hover:bg-cyan-400" @click="enableEditMode" v-if="!hasError">Edit</PButton>
+          <NuxtErrorBoundary @error="hasError">
+            <h2 class="text-4xl font-semibold text-red-500">{{ article.title }}</h2>
+            <p>{{ article.content }}</p>
+          </NuxtErrorBoundary>
         </div>
         <!-- Switch into edit mode with a preview -->
         <div v-else>
