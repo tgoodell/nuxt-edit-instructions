@@ -1,3 +1,5 @@
+import type { ArticleEntry } from "~/interfaces"
+
 export const useHelpArticleApi = () => {
     const config = useRuntimeConfig()
     const defaultOptions = {
@@ -21,16 +23,17 @@ export const useHelpArticleApi = () => {
             })
         },
         async find(slug: string) {
-            try {
-                const data = await $fetch(url, {
+            // try {
+                const data: ArticleEntry[] = await $fetch(url, {
                     ...defaultOptions
                 })
                 return await data.find(art => art['slug'] === slug)
-            }
-            catch (e) {
-                console.log(e)
-                return { error: 'Network Error' }
-            }
+            // }
+            // catch (e) {
+            //     console.log(e)
+            //     // return null
+            //     return {}
+            // }
         }
     }
 }

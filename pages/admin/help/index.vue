@@ -1,6 +1,8 @@
 <script setup>
 const helpArticleApi = useHelpArticleApi()
 const { data, error } = await helpArticleApi.list()
+
+console.log(data)
 </script>
 
 <template>

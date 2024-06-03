@@ -1,9 +1,21 @@
 <script setup lang="ts">
-const route = useRoute()
-const slug = route.params.slug
+import type { ArticleEntry } from '~/interfaces';
+
+const route: object = useRoute()
+const slug: string = route.params?.slug
+
+console.log(typeof route)
 
 const helpArticleApi = useHelpArticleApi()
-const article = ref<ArticleEntry>
+const article = ref<ArticleEntry>({
+  slug: '',
+  created_at: '',
+  updated_at: '',
+  deleted_at: '',
+  title: '',
+  content: '',
+  category: ''
+})
 const hasError = ref(false)
 
 /**
@@ -11,16 +23,16 @@ const hasError = ref(false)
  * Also handle the Network Error message
  */
 async function fetchArticle() {
-  const attempt = await helpArticleApi.find(slug)
+  const attempt: ArticleEntry | undefined = await helpArticleApi.find(slug)
 
   // If the error field exists in the attempt we got
-  if (attempt.error) {
+  if (!attempt) {
     hasError.value = true
     // Replace the article with Network Error information
-    article.value = {
-      'title': "Network Error",
-      'content': `Unable to fetch instructions about ${slug}. Please return home or contact an administrator.`
-    }
+    // article.value = {
+    //   'title': "Network Error",
+    //   'content': `Unable to fetch instructions about ${slug}. Please return home or contact an administrator.`
+    // }
   }
   else {
     hasError.value = false

@@ -5,5 +5,5 @@ export interface ArticleEntry {
     deleted_at: string,
     title: string,
     content: string,
-    catgeory: string
+    category: string
 }
