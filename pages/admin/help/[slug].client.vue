@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import type { RouteLocation } from 'vue-router';
 import type { ArticleEntry } from '~/interfaces';
 
-const route: object = useRoute()
-const slug: string = route.params?.slug
-
-console.log(typeof route)
+const route = useRoute()
+const slug = route.params.slug
 
 const helpArticleApi = useHelpArticleApi()
 const article = ref<ArticleEntry>({
@@ -23,7 +22,16 @@ const hasError = ref(false)
  * Also handle the Network Error message
  */
 async function fetchArticle() {
-  const attempt: ArticleEntry | undefined = await helpArticleApi.find(slug)
+  // Typescript Type Checking
+  const slugToCheck = ref()
+  if (Array.isArray(slug)) {
+    slugToCheck.value = slug[0]
+  }
+  else {
+    slugToCheck.value = slug
+  }
+  
+  const attempt: ArticleEntry | undefined = await helpArticleApi.find(slugToCheck.value)
 
   // If the error field exists in the attempt we got
   if (!attempt) {

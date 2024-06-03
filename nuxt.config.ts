@@ -20,9 +20,6 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores'],
   },
-  typescript: {
-    typeCheck: true
-  },
   tailwindcss: {
     config: {
         content: [
