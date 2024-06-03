@@ -23,17 +23,16 @@ export const useHelpArticleApi = () => {
             })
         },
         async find(slug: string) {
-            // try {
+            try {
                 const data: ArticleEntry[] = await $fetch(url, {
                     ...defaultOptions
                 })
                 return await data.find(art => art['slug'] === slug)
-            // }
-            // catch (e) {
-            //     console.log(e)
-            //     // return null
-            //     return {}
-            // }
+            }
+            catch (e) {
+                console.log(e)
+                return undefined
+            }
         }
     }
 }
