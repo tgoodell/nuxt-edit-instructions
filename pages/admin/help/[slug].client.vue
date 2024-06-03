@@ -8,6 +8,7 @@ const hasError = ref(false)
 
 /**
  * Fetch the relevant article based on the slug from the route
+ * Also handle the Network Error message
  */
 async function fetchArticle() {
   const attempt = await helpArticleApi.find(slug)
@@ -71,7 +72,7 @@ function saveEdits() {
       <div class="bg-slate-50 p-2 leading-7 border-b-4">
         <!-- Print out instructions normally -->
         <div v-if="!inEditMode">
-          <h2 class="text-4xl font-semibold">{{article.title}}</h2>
+          <h2 class="text-4xl font-semibold">{{ article.title }}</h2>
           <div>
             <span v-html="article.content"></span>
           </div>
@@ -79,7 +80,7 @@ function saveEdits() {
         </div>
         <!-- Switch into edit mode with a preview -->
         <div v-else>
-          <h2 class="text-4xl font-semibold mb-2">Editing {{article.title}}</h2>
+          <h2 class="text-4xl font-semibold mb-2">Editing {{ article.title }}</h2>
           <ClientOnly>
             <div class="prose">
               <HEditor v-model="editingCopy.content" />
