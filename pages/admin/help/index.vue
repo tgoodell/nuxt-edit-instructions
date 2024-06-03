@@ -1,24 +1,20 @@
-<script setup lang="ts">
-function someErrorLogger(err) {
-  console.log('got an error', err);
-}
+<script setup>
+const helpArticleApi = useHelpArticleApi()
+const { data, error } = await helpArticleApi.list()
 </script>
 
 <template>
-  
   <PageWrapper class="max-w-screen-lg m-auto">
     <PageHeader page-title="Help Articles" />
     <AdminMenubar class="mb-3 mt-1" />
     <div class="border-2 p-2">
-      <NuxtErrorBoundary @error="someErrorLogger">
-        <ArticleList :data="data" />
-        <!-- <template #error="{ error, clearError }"> -->
-          <!-- <h2 class="text-2xl semibold">Error: Unable to Fetch Articles</h2>
-          <p>Unable to fetch list of articles due to a network error.</p> -->
-          <!-- {{error}} -->
-        <!-- </template> -->
-        <template #error="ctx"> An error happened. </template>
-      </NuxtErrorBoundary>
+      <ul v-if="!error">
+        <li v-for="article in data"><HLink :to="`/admin/help/${article.slug}`">{{ article.title }}</HLink></li>
+      </ul>
+      <div v-else>
+        <h2 class="text-2xl semibold">Error: Unable to Fetch Articles</h2>
+        <p>Unable to fetch list of articles due to a network error.</p>
+      </div>
     </div>
   </PageWrapper>
 </template>
